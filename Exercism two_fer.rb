@@ -1,3 +1,5 @@
-print "Hello World"
-
-print "Hi my name is Matthew"
+class TwoFer
+  def self.two_fer(name = "you")
+    "One for #{name}, one for me."
+  end
+end
