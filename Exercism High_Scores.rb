@@ -1,23 +1,24 @@
 class HighScores
+attr_reader :scores
 
 def initialize(scores)
-  @scores = Array(scores)
+  @scores = scores
 end
 
 def latest
-  @scores.last
+  scores.last
 end
 
 def personal_best
-  @scores.max
+  scores.max
 end
 
 def personal_top_three
-  @scores.sort.reverse[0..2]
+  scores.sort.reverse[0..2]
 end
 
 def latest_is_personal_best?
-  @scores.last == @scores.max ? true : false
+  latest >= personal_best
 end
 
 def scores
